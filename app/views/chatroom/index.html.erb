@@ -8,23 +8,7 @@
     <div class="ui fluid raised card chatbox">
       <div class="content">
         <div class="ui feed">
-          <% @messages.each do |message| %>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                  <i class="user circle icon"></i>
-                  <em><%= message.user.username %></em>: <%= message.body %>
-                </div>
-              </div>
-            </div>
-          <% end %>
-          <%# <div class="event">
-            <div class="content">
-              <div class="summary">
-                <em>Elliot Fu</em>: Test Message
-              </div>
-            </div>
-          </div> %>
+          <%= render @messages %>
         </div>
       </div>
         <div class="extra content">
